@@ -1,12 +1,11 @@
 {
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node_modules/webpack/bin/webpack.js  --mode production ",
-    "serve_dev": "node_modules/webpack-dev-server/bin/webpack-dev-server.js  --mode development "
+    "build": "node_modules/webpack/bin/webpack.js --mode production",
+    "serve_dev": "node_modules/webpack-dev-server/bin/webpack-dev-server.js --mode development"
   },
-  "name": "the_unbeatable_front",
+  "name": "the_unbeatable",
   "version": "0.0.1",
-  "description": "",
+  "description": "the unbeatable bot",
   "main": "index.js",
   "dependencies": {
     "@types/material-ui": "0.21.2",
@@ -16,7 +15,6 @@
     "html-loader": "0.5.5",
     "html-webpack-plugin": "3.2.0",
     "material-ui": "0.20.0",
-    "prettier-webpack-plugin": "1.0.0",
     "react": "16.3.2",
     "react-dom": "16.3.2",
     "source-map-loader": "0.2.3",
@@ -25,12 +23,13 @@
     "webpack-cli": "2.1.2"
   },
   "devDependencies": {
-    "webpack-dev-server": "3.1.4"
+    "webpack-dev-server": "3.1.4",
+    "prettier-webpack-plugin": "1.0.0"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/polosskevin/the_unbeatable"
   },
-  "author": "",
+  "author": "Kévin Polossat, Loïc wisniewski, Éric Alvernhe",
   "license": "ISC"
 }
