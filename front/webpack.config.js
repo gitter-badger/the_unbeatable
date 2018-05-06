@@ -1,8 +1,5 @@
-const path = require("path");
 const PrettierPlugin = require("prettier-webpack-plugin");
-//const HtmlWebPackPlugin = require("html-webpack-plugin");
-
-
+const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.tsx",
@@ -11,7 +8,6 @@ module.exports = {
     ,path: __dirname + "/dist"
   },
   devtool: "source-map",
-
   resolve: {
     // Add '.ts' and '.tsx' as resolvable extensions.
     extensions: [".ts", ".tsx", ".js", ".json"]
@@ -26,7 +22,7 @@ module.exports = {
           test: /\.js$/, 
           enforce: "pre", 
           loader: "source-map-loader" },
-    /*    {
+        {
           test: /\.html$/,
           use: [
             {
@@ -34,15 +30,12 @@ module.exports = {
               options: { minimize: true }
             }
           ]
-        }*/
+        }
     ]
   },
   plugins: [  new PrettierPlugin()
-, 
-// new HtmlWebPackPlugin({ template: "./src/index.html",filename: "./index.html"})
-],
-  externals: {
-    "react": "React",
-    "react-dom": "ReactDOM"
-  },
+, new HtmlWebPackPlugin({ 
+    template: "./src/index.html",
+    filename: "./index.html"
+})]
 };
